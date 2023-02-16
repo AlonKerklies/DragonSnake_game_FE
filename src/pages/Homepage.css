@@ -26,9 +26,11 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+   height: 100%; 
     width: 100vw;
-    /* background-color: #1f2545; */
+    position: absolute;
+    z-index: 3;
+    background-color: #1f25456a;  
 }
 
 @keyframes spinning {

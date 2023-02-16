@@ -34,6 +34,10 @@ const Homepage = () => {
         setRender(!render);
     }, []);
 
+
+// if (authIsReady){console.log('ddddd');}
+// if (!authIsReady){console.log('sssssssss');}
+
     return (
         <>
             {!authIsReady && (
@@ -42,7 +46,10 @@ const Homepage = () => {
                     <div className="loader"></div>
                 </div>
             )}
-            {user && (
+
+
+
+            {user &&   (
                 <>
                     <div className="header">
                         <div className="scoreboard">

@@ -62,7 +62,7 @@ h3 {
 
     border-radius: 15px 0 0 15px;
     filter: drop-shadow(0 0 2.2rem rgba(0, 0, 0, 0.4));
-    overflow: scroll;
+    overflow: none;
 }
 
 .mainRight {
@@ -170,9 +170,21 @@ ul {
     flex-direction: column;
 }
 
+.sideList h3{
+    margin-bottom: 10px;
+    font-family: "Artifika", serif;
+    font-weight: 100;
+    color: #efefef;
+}
+
+
+
+
 ul.scores li p {
     color: #f7d958;
-    /* background-color: #e11d2a; */
+    margin-bottom: 5px;
+    font-family: "Arimo", sans-serif;
+    font-size: 15px;
 }
 
 

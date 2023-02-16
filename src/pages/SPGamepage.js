@@ -25,6 +25,10 @@ const Gamepage = () => {
     const [playLose] = useSound(loseSound, { volume: 0.4 });
     const [play, { stop }] = useSound(music, { volume: 0.5 });
 
+
+
+
+
     const startMusic = () => {
         play();
         setTimeout(() => {
@@ -91,7 +95,12 @@ const Gamepage = () => {
                 { withCredentials: true }
             );
             setAllScores(scores.data);
-            // console.log("Scores: ", scores.data);
+            //  console.log("Scores: ", scores.data);
+
+         
+            //    console.log("Scores: ", scores.data); 
+
+
             function compareScores(a, b) {
                 if (a.score > b.score) {
                     return -1;
@@ -108,8 +117,20 @@ const Gamepage = () => {
     };
 
     useEffect(() => {
+
+        setAllScores(  [
+            { username: "user1", score: 100 },
+            { username: "user2", score: 75 },
+            { username: "user3", score: 90 }
+          ]   );
+
+
         const res = getScores();
     }, [render]);
+
+
+
+
 
     return (
         <div className="gamepage-container">
@@ -119,6 +140,7 @@ const Gamepage = () => {
             >
                 <h3>Leaderboard</h3>
                 <ul className="scores">
+              
                     {allScores &&
                         allScores.map((ele, index) => {
                             return (
